@@ -1,0 +1,142 @@
+<script setup>
+
+//onCreated
+//local registration
+import Header from "./components/Header.vue";
+import { ref, onBeforeMount, onMounted, onBeforeUpdate } from "vue";
+onBeforeUpdate(() => {
+  console.log(
+    `[App.vue]  , onBeforeUpdate , count: ${count.value} , msg: ${msg.value}`
+  );
+});
+onMounted(() => {
+  console.log(`[App.vue], onMounted, count:${count.value}`);
+});
+onBeforeMount(() => {
+  console.log(`[App.vue], onBeforeMount, initialValue : ${initialValue.value}`);
+});
+const count = ref(1);
+const msg = ref("Today is a present");
+console.log(`[App.vue], count: ${count.value}`);
+console.log(`[App.vue], msg: ${msg.value}`);
+const initialValue = ref(null);
+console.log(`initialValue.value: ${initialValue}`); //null
+const reverseMsg = () => {
+  msg.value = msg.value.split("").reverse().join("");
+};
+</script>
+
+<template>
+  <div>
+    <!-- ลบ components ถ้า onMounted -->
+    <Header v-if="count <=3"/>
+
+    <h1 class="text-green-600 text-2xl">Lifecycle Hook</h1>
+    <div class="">
+      <p>Message: {{ msg }}</p>
+      <button
+        class="bg-purple-600 text-white rounded-md px-3 py-1"
+        @click="reverseMsg"
+      >
+        Reverse
+      </button>
+    </div>
+    <div class="flex space-x-1">
+      <button
+        @click="count--"
+        class="border border-red-600 rounded-md px-2 py-1"
+      >
+        -
+      </button>
+      <p>Counter: {{ count }}</p>
+      <button
+        @click="count++"
+        class="border border-green-600 rounded-md px-2 py-1"
+      >
+        +
+      </button>
+    </div>
+    <div>
+      <p>Initial Value</p>
+      <input
+        class="border border-gray-300 rounded-md"
+        type="number"
+        value="500"
+        ref="initialValue"
+      />
+    </div>
+  </div>
+</template>
+
+<style scoped></style>
+<script setup>
+
+//onCreated
+//local registration
+import Header from "./components/Header.vue";
+import { ref, onBeforeMount, onMounted, onBeforeUpdate } from "vue";
+onBeforeUpdate(() => {
+  console.log(
+    `[App.vue]  , onBeforeUpdate , count: ${count.value} , msg: ${msg.value}`
+  );
+});
+onMounted(() => {
+  console.log(`[App.vue], onMounted, count:${count.value}`);
+});
+onBeforeMount(() => {
+  console.log(`[App.vue], onBeforeMount, initialValue : ${initialValue.value}`);
+});
+const count = ref(1);
+const msg = ref("Today is a present");
+console.log(`[App.vue], count: ${count.value}`);
+console.log(`[App.vue], msg: ${msg.value}`);
+const initialValue = ref(null);
+console.log(`initialValue.value: ${initialValue}`); //null
+const reverseMsg = () => {
+  msg.value = msg.value.split("").reverse().join("");
+};
+</script>
+
+<template>
+  <div>
+    <!-- ลบ components ถ้า onMounted -->
+    <Header v-if="count <=3"/>
+
+    <h1 class="text-green-600 text-2xl">Lifecycle Hook</h1>
+    <div class="">
+      <p>Message: {{ msg }}</p>
+      <button
+        class="bg-purple-600 text-white rounded-md px-3 py-1"
+        @click="reverseMsg"
+      >
+        Reverse
+      </button>
+    </div>
+    <div class="flex space-x-1">
+      <button
+        @click="count--"
+        class="border border-red-600 rounded-md px-2 py-1"
+      >
+        -
+      </button>
+      <p>Counter: {{ count }}</p>
+      <button
+        @click="count++"
+        class="border border-green-600 rounded-md px-2 py-1"
+      >
+        +
+      </button>
+    </div>
+    <div>
+      <p>Initial Value</p>
+      <input
+        class="border border-gray-300 rounded-md"
+        type="number"
+        value="500"
+        ref="initialValue"
+      />
+    </div>
+  </div>
+</template>
+
+<style scoped></style>

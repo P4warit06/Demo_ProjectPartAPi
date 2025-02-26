@@ -1,23 +1,36 @@
 <script setup>
-import { onBeforeMount, onMounted, onBeforeUnmount, onUnmounted } from 'vue'
-onBeforeMount(() => {
-  console.log('[Header.vue], onBeforeMount')
-})
-onMounted(() => {
-  console.log('[Header.vue], onMounted')
-})
-onBeforeUnmount(() => {
-  console.log('[Header.vue], onUnMount')
-})
-onUnmounted(() => {
-  console.log('[Header.vue], onUnmounted')
-})
+
 </script>
 
 <template>
-  <div>
-    <h1 class="text-4xl text-blue-700 tracking-wider">Header Title</h1>
+  <div class="flex text-4xl font-bold  p-4">
+    <!--Logo -->
+    <div class="mr-4">
+      <slot name="logo">
+        <img src="../components/icons/Onyx (8-bit).jpeg" alt="" width="150px" height="50px">
+      </slot>
+    </div>
+    <div class="flex flex-col">
+      <!--Main title-->
+      <div class="flex flex-col">
+        <h3 class="text-blue-900">
+          <slot name="Maintitle">Main title </slot>
+        </h3>
+      </div>
+
+      <!--Subtitle--->
+      <div class="">
+        <h5 class="text-green-300">
+          <slot name="Subtitle"> Subtitle</slot>
+        </h5>
+      </div>
+
+    </div>
+
+
+
   </div>
+
 </template>
 
 <style scoped></style>
