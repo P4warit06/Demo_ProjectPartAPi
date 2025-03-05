@@ -10,8 +10,8 @@ console.log(props.products)
 </script>
 
 <template>
-  <div class="p-6 bg-gray-100 rounded-xl shadow-md">
-    <ListModel :items="products">
+  <div>
+    <ListModel :items="products" list-type="card">
       <template #heading> ---Product List--- </template>
       <template #listItems="{ yourItem }">
         <p>
