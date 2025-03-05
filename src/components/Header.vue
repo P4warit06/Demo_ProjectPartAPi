@@ -7,7 +7,7 @@
     <!--Logo -->
     <div class="mr-4">
       <slot name="logo">
-        <img src="../components/icons/Onyx (8-bit).jpeg" alt="" width="150px" height="50px">
+        <img src="../components/icons/Onyx (8-bit).jpeg" alt="" width="100px" height="75px">
       </slot>
     </div>
     <div class="flex flex-col">
