@@ -36,7 +36,7 @@ const newProduct = ref({
       </div>
       <!-- 2. event trigger -->
       <button
-        @click="$emit('addNewProduct', newProduct)"
+        @click="$emit('addNewProduct', {product:newProduct, EventTarget: $event.target})" 
         class="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition-colors duration-300"
       >
         Add Product

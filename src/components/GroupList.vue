@@ -1,6 +1,5 @@
 <script setup>
 import groups from "../../data/groups.json";
-import Listmodel from "./model/Listmodel.vue";
 </script>
 
 <template>

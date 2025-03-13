@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "backend": "json-server --watch ./data/db.json --port 5000"
+    "backend": "json-server --watch ./data/db.json --port 5050"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.8",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.2.1",
+    "prettier": "^3.5.3",
     "vite": "^6.2.0",
     "vite-plugin-vue-devtools": "^7.7.2"
   }

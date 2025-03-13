@@ -1,9 +1,10 @@
 <script setup>
-import ListModel from './model/Listmodel.vue'
+import ListModel from './model/ListModel.vue'
+defineEmits(['deleteProduct'])
 const props = defineProps({
   products: {
     type: Array,
-    require: true
+    required: true
   }
 })
 console.log(props.products)
@@ -11,12 +12,22 @@ console.log(props.products)
 
 <template>
   <div>
-    <ListModel :items="products" list-type="card">
+    <ListModel :items="products" listType="card">
       <template #heading> ---Product List--- </template>
       <template #listItems="{ yourItem }">
+        <button class="text-purple-600 hover:text-purple-400 cursor-pointer">
+          Edit |
+        </button>
+        <button
+          @click="$emit('deleteProduct', yourItem.id)"
+          class="text-red-600 hover:text-red-400 cursor-pointer"
+        >
+          Delete
+        </button>
         <p>
-          <span class="text-red-700">Product Id: </span> {{ yourItem.productId }} ,
-          <span class="text-indigo-700">Product Name:</span> {{ yourItem.productName }}
+          <span class="italic">id: </span>{{ yourItem.id }},
+          <span class="italic">product name:</span>{{ yourItem.productName }}
+          <span class="italic">price:</span>{{ yourItem.price }}
         </p>
       </template>
     </ListModel>

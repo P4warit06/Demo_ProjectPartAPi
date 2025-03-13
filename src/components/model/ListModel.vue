@@ -2,17 +2,18 @@
 const props = defineProps({
   items: {
     type: Array,
-    required: true,
+    required: true
   },
   listType: {
-    type: String,
-    default: "list",
+    default: 'list',
+    //validator:function(value,props){}
     validator(value, props) {
-      return ["card", "list"].includes(value);
-    },
-  },
-});
-console.log(props.items);
+      return ['card', 'list'].includes(value)
+    }
+  }
+})
+console.log(props.items)
+console.log(props.listType)
 </script>
 
 <template>
@@ -20,19 +21,17 @@ console.log(props.items);
     <div class="text-xl tracking-wider font-semibold">
       <slot name="heading">###Enter your list heading###</slot>
     </div>
-    <ul v-if="listType === 'list'">
-      <li v-for="(item, index) in items" :key="index">
-        <slot name="listItems" :yourItem="item">Enter your list items</slot>
-      </li>
-    </ul>
-    <div v-else-if="listType === 'card'">
-      <div
+    <ul>
+      <li
         v-for="(item, index) in items"
         :key="index"
-        class="m-2 p-4 border rounded-lg shadow-sm"
+        :class="listType === 'card' ? 'shadow-md p-10' : ''"
       >
-        <slot name="listItems" :yourItem="item">Enter your list items</slot>
-      </div>
-    </div>
+        <slot name="listItems" :yourItem="item">Enter your list item</slot>
+        <!-- {{ item }} -->
+      </li>
+    </ul>
   </div>
 </template>
+
+<style scoped></style>

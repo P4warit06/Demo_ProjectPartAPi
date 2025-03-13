@@ -1,4 +1,171 @@
-[
-    { "name": "Item 1", "value": "Value 1" },
-    { "name": "Item 2", "value": "Value 2" }
-]
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Understanding AI Basics",
+      "views": 150
+    },
+    {
+      "id": "2",
+      "title": "The Future of Web Development",
+      "views": 230
+    },
+    {
+      "id": "3",
+      "title": "How to Start Programming in Python",
+      "views": 180
+    },
+    {
+      "id": "4",
+      "title": "Top 10 JavaScript Frameworks in 2025",
+      "views": 300
+    },
+    {
+      "id": "5",
+      "title": "Cybersecurity Best Practices",
+      "views": 175
+    },
+    {
+      "id": "6",
+      "title": "Building Your First Mobile App",
+      "views": 210
+    },
+    {
+      "id": "7",
+      "title": "Exploring Machine Learning",
+      "views": 270
+    },
+    {
+      "id": "8",
+      "title": "Why You Should Learn SQL",
+      "views": 190
+    },
+    {
+      "id": "9",
+      "title": "Introduction to Cloud Computing",
+      "views": 220
+    },
+    {
+      "id": "10",
+      "title": "The Role of Big Data in Business",
+      "views": 250
+    },
+    {
+      "id": "11",
+      "title": "Tips for Writing Clean Code",
+      "views": 280
+    },
+    {
+      "id": "12",
+      "title": "Beginner’s Guide to Blockchain",
+      "views": 160
+    },
+    {
+      "id": "13",
+      "title": "How to Ace Technical Interviews",
+      "views": 310
+    },
+    {
+      "id": "14",
+      "title": "Understanding Data Structures and Algorithms",
+      "views": 260
+    },
+    {
+      "id": "15",
+      "title": "The Evolution of UI/UX Design",
+      "views": 200
+    },
+    {
+      "id": "16",
+      "title": "Diving into Functional Programming",
+      "views": 140
+    },
+    {
+      "id": "17",
+      "title": "Cyber Threats in 2025",
+      "views": 290
+    },
+    {
+      "id": "18",
+      "title": "Comparing NoSQL and SQL Databases",
+      "views": 230
+    },
+    {
+      "id": "19",
+      "title": "A Guide to RESTful APIs",
+      "views": 185
+    },
+    {
+      "id": "20",
+      "title": "Best Resources to Learn Coding",
+      "views": 330
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "products": [
+    {
+      "productName": "Wireless Mouse",
+      "price": 25.11,
+      "id": "1f2c"
+    },
+    {
+      "productName": "Bluetooth Headphones",
+      "price": 49.99,
+      "id": "2835"
+    },
+    {
+      "productName": "Mechanical Keyboard",
+      "price": 75.99,
+      "id": "026a"
+    },
+    {
+      "productName": "USB-C Hub",
+      "price": 29.99,
+      "id": "75a7"
+    },
+    {
+      "productName": "Gaming Monitor",
+      "price": 199.99,
+      "id": "f787"
+    },
+    {
+      "productName": "External SSD 1TB",
+      "price": 119.99,
+      "id": "9be6"
+    },
+    {
+      "productName": "Smartphone Charger",
+      "price": 15.99,
+      "id": "cd75"
+    },
+    {
+      "id": "d2a4",
+      "productName": "ipad pros",
+      "price": 22.22
+    },
+    {
+      "id": "4b73",
+      "productName": "Smartwatch",
+      "price": 66.77
+    },
+    {
+      "id": "684a",
+      "productName": "iphone",
+      "price": 1599
+    }
+  ]
+}

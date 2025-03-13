@@ -8,6 +8,8 @@ import ProductManager from "./components/ProductManager.vue";
 import { ref } from 'vue'
 import ReadCount from "./components/ReadCount.vue";
 const count = ref(1)
+console.log(import.meta.env.VITE_APP_URL)
+console.log(import.meta.env.DB_PASSWORD)
 </script>
 <template>
   <div>
