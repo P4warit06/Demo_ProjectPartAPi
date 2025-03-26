@@ -1,15 +1,18 @@
 <script setup>
-import groups from "../../data/groups.json";
+import groups from '../../data/groups.json'
+import ListModel from './model/ListModel.vue'
 </script>
 
 <template>
   <div>
-    <ListModel :items="groups" listType="card">
-      <template #heading> <p>### GROUP LIST ###</p> </template>
+    <ListModel :items="groups">
+      <template #heading>
+        <p>###Group List###</p>
+      </template>
       <template v-slot:listItems="{ yourItem }">
         <p>
-          <span class="italic text-red-700">id:</span>{{ yourItem.ID }}
-          <span class="italic text-indigo-850">group name:</span>{{ yourItem.groupName }}
+          <span class="italic">id: </span>{{ yourItem.ID }},
+          <span class="italic">group name:</span>{{ yourItem.groupName }}
         </p>
       </template>
     </ListModel>

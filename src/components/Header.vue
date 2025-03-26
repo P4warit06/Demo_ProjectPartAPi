@@ -1,36 +1,11 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
-  <div class="flex text-4xl font-bold  p-4">
-    <!--Logo -->
-    <div class="mr-4">
-      <slot name="logo">
-        <img src="../components/icons/Onyx (8-bit).jpeg" alt="" width="100px" height="75px">
-      </slot>
-    </div>
-    <div class="flex flex-col">
-      <!--Main title-->
-      <div class="flex flex-col">
-        <h3 class="text-blue-900">
-          <slot name="Maintitle">Main title </slot>
-        </h3>
-      </div>
-
-      <!--Subtitle--->
-      <div class="">
-        <h5 class="text-green-300">
-          <slot name="Subtitle"> Subtitle</slot>
-        </h5>
-      </div>
-
-    </div>
-
-
-
+  <div class="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-blue-400">
+    <!-- slot outlet -->
+    <!-- default fallback content -->
+    <slot>Please Enter your main title here...</slot>
   </div>
-
 </template>
 
 <style scoped></style>

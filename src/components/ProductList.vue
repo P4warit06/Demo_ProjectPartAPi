@@ -1,6 +1,6 @@
 <script setup>
 import ListModel from './model/ListModel.vue'
-defineEmits(['deleteProduct'])
+defineEmits(['deleteProduct', 'setEditing'])
 const props = defineProps({
   products: {
     type: Array,
@@ -15,19 +15,17 @@ console.log(props.products)
     <ListModel :items="products" listType="card">
       <template #heading> ---Product List--- </template>
       <template #listItems="{ yourItem }">
-        <button class="text-purple-600 hover:text-purple-400 cursor-pointer">
+        <button @click="$emit('setEditing', yourItem)" class="text-purple-600 hover:text-purple-400 cursor-pointer">
           Edit |
         </button>
-        <button
-          @click="$emit('deleteProduct', yourItem.id)"
-          class="text-red-600 hover:text-red-400 cursor-pointer"
-        >
+        <button @click="$emit('deleteProduct', yourItem.id)" class="text-red-600 hover:text-red-400 cursor-pointer">
           Delete
         </button>
         <p>
-          <span class="italic">id: </span>{{ yourItem.id }},
-          <span class="italic">product name:</span>{{ yourItem.productName }}
-          <span class="italic">price:</span>{{ yourItem.price }}
+          <span class="italic">id: </span>
+          <router-link :to="{ name: 'ProductDetail', params: { productId: yourItem.id } }" class="underline">{{
+            yourItem.id }}</router-link>, <span class="italic">product name:</span>{{ yourItem.productName }} <span
+            class="italic">price:</span>{{ yourItem.price }}
         </p>
       </template>
     </ListModel>
